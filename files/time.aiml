@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+<category><pattern>* IN 2020</pattern>
+<template>
+  <interval format="%Y-%m-%dT%T%z">
+  <style><star/></style>
+  <from>2020-01-01T00:00:00Z</from>
+  <to><date format="%Y-%m-%dT%T%z" /></to>
+  </interval> <star/> as of <date format="%Y-%m-%dT%T%z" />
+</template>
+</category>
+
+
+<category><pattern>* THIS YEAR</pattern>
+<template>
+  <interval format="%B %d, %Y T%T%Z">
+  <style><star/></style>
+  <from>January 01, 2020 T00:00:00GMT</from>
+  <to><date format="%B %d, %Y T%T%Z" /></to>
+  </interval> <star/> as of <date format="%B %d, %Y T%T%Z" />
+</template>
+</category>
+
+
+
+<category>
+<pattern>HOW MANY DAYS UNTIL CHRISTMAS</pattern>
+<template>
+<interval>
+<jformat>MMMMMMMMM dd</jformat>
+<style>days</style>
+<from><date jformat="MMMMMMMMM dd"/></from>
+<to>December 25</to>
+</interval>
+days until Christmas.
+</template>
+</category>
+
+<category>
+    <pattern>XNAME *</pattern>
+    <template><sentence><star/></sentence></template>
+</category>
+
+<category><pattern>now</pattern><template><date format="%Y-%m-%dT%T%Z" /></template></category>
+
+<category><pattern>* TO NOW</pattern>
+<template>
+  <interval>
+  <style><star/></style>
+  <from>Jan 01, 2020</from>
+  <to><date /></to>
+  </interval> <star/> as of <date />
+</template>
+</category>
+
+</aiml>
+
+
